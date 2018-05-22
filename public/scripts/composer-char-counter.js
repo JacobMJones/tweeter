@@ -4,11 +4,13 @@ $(document).ready(function () {
     $(".form_text_area").on('input',function (event) {
         let currentText = $(this).val();
         let counterValue = 140 - currentText.length;
-        let counter = $(this).siblings("span");
+        let counter = $(this).siblings(".counter");
 
         counter.text(counterValue);
         if(counterValue<0){
-            counter.css('color', 'red');
+            counter.addClass('counter-over');
+        }else{
+            counter.removeClass('counter-over');
         }
     });
 });

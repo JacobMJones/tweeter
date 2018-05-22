@@ -28,11 +28,16 @@ h2{
 
     float: right;
     padding-right: 5%;
+    color: black;
+}
+.counter-over{
+
+    color: red;
 }
 
-form.form_text_area{
-    
-}
+
+
+
 /* border-radius: 25px;
 background: #73AD21;
 padding: 20px; 
