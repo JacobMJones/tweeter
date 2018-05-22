@@ -5,7 +5,11 @@ article {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    
+    box-shadow: 0px 0px;
+}
+
+article:hover {
+    box-shadow: 5px 10px;
 }
 
 header {
@@ -14,41 +18,43 @@ header {
     padding-right: 10px;
     background-color: lightgrey;
     height: 65px;
-    border-radius: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
     vertical-align: top;
 }
 
 footer {
-   padding-top: .5px;
-   padding-left: 10px;
+    padding-top: .5px;
+    padding-left: 10px;
     background-color: lightgrey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 35px;
-    border-radius: 1px;
     width: 100%;
 }
 
 img {
-
     background-color: transparent;
     float: left;
-
 }
 
-.name{
-    line-height:10%;
+.name {
+    line-height: 10%;
     margin-left: 10px;
     float: left;
     font-size: 1.5em;
 }
-.handle{
-    float: right;  
+
+.handle {
+    float: right;
 }
 
-.date{
+.date {
     font-size: .8em;
 }
-.tweet-text{
+
+.tweet-text {
     padding-left: 10px;
     padding-right: 10px;
 }
