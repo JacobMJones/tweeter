@@ -1,0 +1,54 @@
+article {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    
+}
+
+header {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightgrey;
+    height: 65px;
+    border-radius: 1px;
+    width: 100%;
+    vertical-align: top;
+}
+
+footer {
+   padding-top: .5px;
+   padding-left: 10px;
+    background-color: lightgrey;
+    height: 35px;
+    border-radius: 1px;
+    width: 100%;
+}
+
+img {
+
+    background-color: transparent;
+    float: left;
+
+}
+
+.name{
+    line-height:10%;
+    margin-left: 10px;
+    float: left;
+    font-size: 1.5em;
+}
+.handle{
+    float: right;  
+}
+
+.date{
+    font-size: .8em;
+}
+.tweet-text{
+    padding-left: 10px;
+    padding-right: 10px;
+}
