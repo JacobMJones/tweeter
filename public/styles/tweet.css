@@ -42,11 +42,14 @@ footer {
     width: 100%;
 }
 
-img {
+img.logo {
     background-color: transparent;
     float: left;
 }
 
+img.avatar {
+    float: left;
+}
 .name {
     line-height: 10%;
     margin-left: 10px;
@@ -59,10 +62,18 @@ img {
 }
 
 .date {
+    display: inline-block;
     font-size: .8em;
 }
 
 .tweet-text {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.footer-icon { 
+    float: right;
+    width: 15px;
+    height: 15px;
+    margin: 10px;
 }

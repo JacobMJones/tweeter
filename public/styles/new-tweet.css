@@ -10,8 +10,7 @@ textarea {
 form {
     padding-left: 20px;
 }
-input {
-    
+input {    
     padding-left: 5%px;
 }
 
@@ -22,7 +21,6 @@ h2{
     position: relative;
     padding-left: 20px;
     top: 10px;
-  
 }
 .counter {
 
