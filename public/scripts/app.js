@@ -4,30 +4,62 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
-  renderTweets(data)
+
+
+
+  $('#tweet-form').submit(function (event) {
+    event.preventDefault();
+    let values = $(this).serialize()
+    let tweetLength = values.length - 5;
+
+    if (tweetLength === 0) {
+      console.log('tweet 0 length');
+    } else if (tweetLength > 140) {
+      console.log('tweet too long');
+    } else {
+
+      $.ajax('/tweets', {
+        data: values,
+        success: function () {
+          console.log('post method worked')
+        },
+        error: function (err) {
+          console.log('error in render', err)
+        },
+        method: 'POST'
+      })
+    }
+
+
+  });
+
+  function loadTweets() {
+    $.ajax({
+      dataType: "json",
+      method: 'GET',
+      url: '/tweets',
+      success: function (returnedTweets) {
+        renderTweets(returnedTweets)
+      },
+      error: function (err) {
+        console.log('error in loads', err);
+      }
+    });
+  }
+
+  loadTweets();
 });
 
 function calculateTimeSincePost(tweet) {
 
- // The number of milliseconds in one day
- var ONE_DAY = 1000 * 60 * 60 * 24
-
- // Convert both dates to milliseconds
- var date1_ms = tweet.created_at;
- var date2_ms = 0;
-console.log(date2_ms, date1_ms);
- // Calculate the difference in milliseconds
- var difference_ms = Math.abs(date1_ms - date2_ms);
-
- console.log ("difference", Math.round(difference_ms/ONE_DAY));
- 
-
 }
 
-function createTweetElement(tweet) {
 
-calculatedDate = new Date(tweet.created_at).toLocaleDateString();
-calculateTimeSincePost(tweet);
+
+function createTweetElement(tweet) {
+  //time not implemented
+  calculatedDate = new Date(tweet.created_at).toLocaleDateString();
+  calculateTimeSincePost(tweet);
   let article = $('<article/>)');
 
   let header = $('<header/>');
@@ -58,6 +90,8 @@ function renderTweets(tweetArray) {
     $('.container').append(tweet);
   }
 }
+
+
 //#region test tweet
 const data = [{
     "user": {
