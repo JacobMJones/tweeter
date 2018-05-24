@@ -28,9 +28,13 @@
   <nav id="nav-bar" class="sticky">
     <img class="logo" src="/images/bird.png" width="80px" height="80px">
     <span class="header">Tweeter</span>
+    <button type="button" id="toggle-button" onclick="toggleComposeForm()">
+        <img src="/images/pen.png" id="toggle-button-image" >
+       <br> Compose</button>
   </nav>
 
   <!-- Page-specific (main) content here -->
+  <section id ="container-container">
   <main class="container">
     <h2>Compose Tweet</h2>
     <hr>
@@ -40,11 +44,17 @@
       <input type="submit" value="Tweet">
       <span class="counter">140</span>
     </form>
- 
 
-
-  </main>
-
+    <div id="flash-message-div">
+      <span id="flash-message"></span>
+      <br>
+      <a id="clear_ack" href="#" onclick="$(this).parents('div#flash-message-div').fadeOut(400); return false;">
+        <em>Got it!</em>
+      </a>
+    </div>
+   </main>
+    <section id="tweet-list"></section>
+  </section>
 </body>
 
 </html>

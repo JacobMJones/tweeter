@@ -3,6 +3,7 @@
     height: 80px;
     color: #e8fdff;
     width: 100%;
+    padding-top: .25em;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -23,4 +24,12 @@
     float: left;
     height: 80px;
     width: 80px;
+}
+#toggle-button{
+    padding-top: 5px;
+    height: 70px;
+    float: right;
+}
+#toggle-button-image{
+    height: 50%;
 }
