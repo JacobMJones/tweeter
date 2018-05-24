@@ -12,6 +12,7 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
+        
         res.json(tweets);
       }
     });
@@ -37,7 +38,7 @@ module.exports = function(DataHelpers) {
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
-      } else {
+      } else {        
         res.status(201).send();
       }
     });
