@@ -52,5 +52,8 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);
   })
-
+  process.on('SIGINT', () => {
+    db.close();
+    console.log('connection closed');
+  })
 });
